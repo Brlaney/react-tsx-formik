@@ -2,7 +2,7 @@ import React from 'react';
 import * as yup from 'yup';
 import { Formik } from 'formik';
 import Stepper from './components/Stepper';
-import Initial from './components/Steps/Initial';
+import Initial from './components/Initial';
 import './scss/globals.scss';
 
 
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <Stepper />
         <Formik
           validationSchema={schema}
-          initialValues={{ nodes: '', members: '' }}
+          initialValues={{ system: '', nodes: 1, members: 1 }}
           onSubmit={() => { }}
         >
           {() => (

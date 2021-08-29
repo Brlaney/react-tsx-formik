@@ -10,14 +10,20 @@ export const SliderFormField: React.FC<FieldProps & { label: string }> = ({
 }) => {
   return (
     <>
-      <Typography>{label}</Typography>
+      <Typography
+        component='div'
+        id='sliderlabel'
+        // variant='h3'
+      >
+        {label}
+      </Typography>
       <Slider
         onChange={(_, v) => form.setFieldValue(field.name, v)}
         value={field.value}
-        step={10}
+        step={1}
         marks
-        min={10}
-        max={110}
+        min={1}
+        max={50}
         {...props}
       />
     </>
